@@ -328,6 +328,139 @@
 }
 
 
+.stories-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px 20px;
+    border-radius: 10px;
+    text-align: center;
+    background: url('assets/bg.png') no-repeat center center/cover;
+    position: relative;
+    color: #fff;
+}
+
+.stories-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+     
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+    border-bottom: 2px dashed #fff;
+    padding-bottom: 10px;
+}
+
+.stories-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.story-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+}
+
+.story-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px 10px 0 0;
+}
+
+.story-content {
+    padding: 20px;
+    text-align: left;
+    color: #333;
+}
+
+.story-card.large {
+    grid-column: span 2;
+}
+
+.date {
+    display: inline-block;
+    background: #00bcd4;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    top: 200px;
+    left: 20px;
+}
+
+.date.green {
+    background: #66bb6a;
+}
+
+.date.purple {
+    background: #673ab7;
+}
+
+.view-all-btn {
+    background: #fff;
+    color: #1630c1;
+    border: none;
+    padding: 15px 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.view-all-btn:hover {
+    background: #333;
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .stories-container {
+        grid-template-columns: 1fr;
+    }
+
+    .story-card.large {
+        grid-column: span 1;
+    }
+}
+
+
+
+
+
+/* /* footer section */
+
+
+
+
+
 .footer {
     background-color: #00aaff;
     color: white;
