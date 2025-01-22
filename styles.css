@@ -83,7 +83,8 @@
   @media (max-width: 768px) {
     .nav,
     .contact-btn ,
-    .school
+    .school,
+    .navigation button
     {
       display: none;
     }
@@ -94,7 +95,17 @@
   }
 
   /* hero sectiom  */
-
+.marquee-section {
+    background: #007acc;
+    color: #fff;
+    padding: 15px 0;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
 
   .hero {
     display: flex;
